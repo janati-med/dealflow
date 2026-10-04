@@ -9,6 +9,12 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 @Transactional
 public class CustomerService {
+    @Transactional(readOnly = true)
+    public List<CustomerResponse> search(String query) {
+        return repository
+                .findByNameContainingIgnoreCaseOrCompanyContainingIgnoreCase(query, query)
+                .stream().map(CustomerResponse::from).toList();
+    }
 
     private final CustomerRepository repository;
 

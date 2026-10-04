@@ -85,4 +85,11 @@ class SecurityIntegrationTest {
                 .andReturn().getResponse().getContentAsString();
         return "Bearer " + JsonPath.<String>read(body, "$.token");
     }
+    @Test
+    void mcpEndpointRequiresToken() throws Exception {
+        mockMvc.perform(post("/mcp")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("{}"))
+                .andExpect(status().isUnauthorized());
+    }
 }

@@ -1,0 +1,15 @@
+main { padding: 16px 24px; }
+header { display: flex; justify-content: space-between; align-items: center; }
+button { cursor: pointer; border: 1px solid #c4c7cc; background: #fff; border-radius: 6px; padding: 6px 10px; }
+button:hover { background: #eef1f5; }
+input, select { padding: 6px 8px; border: 1px solid #c4c7cc; border-radius: 6px; }
+.error { color: #b3261e; }
+.login { max-width: 280px; margin: 15vh auto; display: flex; flex-direction: column; gap: 10px; }
+.new-deal { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.board { display: grid; grid-template-columns: repeat(5, minmax(180px, 1fr)); gap: 12px; align-items: start; overflow-x: auto; }
+.column { background: #e8ebf0; border-radius: 8px; padding: 10px; }
+.column h2 { font-size: 14px; margin: 0; }
+.total { margin: 2px 0 10px; font-size: 12px; color: #5f6368; }
+.card { background: #fff; border-radius: 6px; padding: 8px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.actions { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.actions button { font-size: 11px; padding: 3px 6px; }

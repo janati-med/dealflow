@@ -3,6 +3,13 @@ app:
     secret: ${JWT_SECRET:dev-only-secret-change-me-at-least-32-bytes!!}
     expiry-minutes: 60
 spring:
+  ai:
+    mcp:
+      server:
+        name: dealflow
+        version: 1.0.0
+        protocol: STREAMABLE
+  # ... your existing application, datasource, jpa, flyway settings stay here
   application:
     name: dealflow
   datasource:
